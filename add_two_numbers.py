@@ -21,10 +21,10 @@ class Solution:
             val = carry + v1 + v2
             carry = val // 10   # 8 + 6 = 14, carry = 1
             val = val % 10      # 8 + 6 = 14, val = 4
-            curr.next = ListNode(val)
+            curr.next = ListNode(val)  # set a ListNode to a next val
             curr = curr.next
             
             l1 = l1.next if l1 else None
             l2 = l2.next if l2 else None
             
-        return dummy.next
+        return dummy.next  # the reason for next is that dummys default is 0 which is  ListNode(0)
